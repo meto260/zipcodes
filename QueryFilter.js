@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const connectionString = '${{ secrets.SECRET_TOKEN }}';
+const connectionString = '${{ secrets.CON_STR }}';
 const db = new Pool({ connectionString, ssl: { rejectUnauthorized: false } });
 
 class QueryFilter {
