@@ -35,19 +35,19 @@ createApp({
         <table>
             <tr>
                 <th>
-                    <input type='text' placeholder="Country" name='country' @keyup='keyupText' @keyup.enter='onsearchSubmit' />
+                    <input type='text' placeholder="Country Ex: TR" name='country' @keyup='keyupText' @keyup.enter='onsearchSubmit' />
                 </th>
                 <th>
-                    <input type='text' placeholder="ZipCode" name='zip' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
+                    <input type='text' placeholder="ZipCode Ex: 34000" name='zip' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
                 </th>
                 <th>
-                    <input type='text' placeholder="City" name='city' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
+                    <input type='text' placeholder="City Ex: İstanbul" name='city' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
                 </th>
                 <th>
-                    <input type='text' placeholder="District" name='dist' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
+                    <input type='text' placeholder="District  Ex: Bey" name='dist' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
                 </th>
                 <th>
-                    <input type='text' placeholder="Place" name='nbhood' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
+                    <input type='text' placeholder="Place  Ex: Tok" name='nbhood' @keyup='keyupText' @keyup.enter='onsearchSubmit'  />
                 </th>
                 <th colspan="2">
                     <p id="suggestion"></p>
