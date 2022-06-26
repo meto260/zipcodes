@@ -1,9 +1,12 @@
 const { v4: uuid } = require('uuid');
+const path = require("path");
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
+app.use(express.static('wwwroot'))
+
 const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 const QueryFilter = require('./QueryFilter.js');
@@ -12,8 +15,8 @@ app.listen(port, () => {
     console.log(`API is running on: http://localhost:${port}.`);
 });
 
-app.get('/', (request, response) => {
-    response.send('Welcome on the zipcode API! Take a breath and start using it!')
+app.get('/', async (request, response)=>{
+    response.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
 app.get('/q', async (request, response)=>{

@@ -15,7 +15,13 @@
     "dotenv": "^16.0.1",
     "esm": "^3.2.25",
     "express": "^4.18.1",
+    "express-vue": "^5.16.0",
+    "path": "^0.12.7",
     "pg": "^8.7.3",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
   }
 }

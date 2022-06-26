@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(236, 234, 230);
+}
+#app{
+    width: 100%;
+}
+input{
+    width: 88%;
+    padding: 9px;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid lightgray;
+}
+
+table{
+    width: 100%;
+}
+
+tr{
+    border-bottom: 1px solid rgb(51, 50, 50);
+}
+.hovertr:hover{
+    background-color: gray;
+    color:white;
+    cursor:pointer;
+}
+
+th{
+    text-align: center;
+    padding: 10px;
+    border:1px solid gray;
+}
+
+td{
+    text-align: center;
+    width: 14%;
+    padding: 10px;
+}
+#suggestion{
+    font-size: 8px;
+    color:gray;
+}
