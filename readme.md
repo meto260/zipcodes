@@ -7,8 +7,9 @@ A simple interface with fast filtering. Api backends that developers can use in 
 Platform tools
 ------------
 
-Backend: Nodejs
-Frontend: Vuejs
+    Backend: Nodejs - 
+    Frontend: Vuejs - 
+    Database: Postgresql
 
 
 Developers 
@@ -19,7 +20,8 @@ Developers
 
 
 
-
+    Try for free
+    https://my-zipcodes.herokuapp.com
 
 
 
