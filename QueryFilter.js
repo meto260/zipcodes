@@ -26,6 +26,10 @@ class QueryFilter {
 
     async searchInCodes(rq) {
         try {
+            if(!this.queryInjectionChecker(rq)) {
+                console.log("queryInjectionChecker");
+                return {success:false, err:"detected sql injection"};
+            }
             const { country, zip, nbhood, city, dist } = rq;
             let query = "SELECT * FROM postalcode";
             let where = [];
@@ -52,8 +56,27 @@ class QueryFilter {
                 return { success: false, data: "nothing found" };
 
         } catch (err) {
+            console.log(err);
             return { success: false, data: err };
         }
+    }
+
+    queryInjectionChecker(rq){
+        let result=true;
+        let compareKeys= [
+            ',', '\"', '.', '=', '*', '/', '\\', '$', '%', 
+            '&', '(', ')', '?', '\`', '!', ';', '[', ']',
+            '{', '}', ' ', "-"
+        ];
+        for (const [key, value] of Object.entries(rq)) {
+            for(const val of compareKeys){
+                if(value.includes(val)){
+                    result = false;
+                    break;
+                }
+            }
+        }
+        return result;
     }
 }
 module.exports = QueryFilter;
